@@ -1,0 +1,88 @@
+.add-comment-form {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+/* Текстовое поле с комментариями */
+.add-comment-form .ant-input {
+  resize: none;
+  border-radius: 8px;
+  border: 0;
+  margin-bottom: 16px;
+}
+
+/* Блок предпросмотра вложений с фиксированной высотой (уменьшена до 80px) */
+.attachments-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  height: 60px;       /* Фиксированная высота, чтобы блок не расширялся */
+  overflow-y: auto;   /* Вертикальный скролл при избытке вложений */
+  margin-bottom: 16px;
+}
+
+/* Общий стиль для каждого элемента вложения */
+.attachment-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: #fafafa;
+}
+
+/* Стиль для изображения */
+.image-attachment {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.attachment-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Стиль для файлов */
+.file-attachment {
+  min-width: 120px;
+  height: 60px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.file-name {
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80px;
+}
+
+/* Кнопка удаления для вложений */
+.remove-attachment-btn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+/* Блок с действиями формы */
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.form-actions .ant-btn {
+  border-radius: 20px;
+}

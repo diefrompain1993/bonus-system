@@ -1,0 +1,105 @@
+.ticket-details {
+  background-color: #fff;
+  padding: 24px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticket-header h5 {
+  margin: 0 !important;
+}
+
+.close-button {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.ticket-info {
+  margin-bottom: 20px;
+}
+
+.ticket-info .ant-typography {
+  display: block;
+  margin-bottom: 6px;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+/* Объединённый блок даты и статуса */
+.date-status .date-status-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Горизонтальное выравнивание "Система" и "Вид работы" (убираем широкое выравнивание) */
+.system-work-row {
+  display: flex;
+  align-items: center;
+  gap: 50px; /* Ставим небольшой интервал, чтобы "Вид работы" был почти сразу за "Система" */
+}
+
+.system,
+.work-type {
+  width: auto; /* Убираем фиксированную ширину, чтобы они шли друг за другом */
+}
+
+/* Блок отчёта с фиксированной максимальной высотой и внутренним скроллом */
+.ticket-report-inline {
+  margin-top: 16px;
+  background-color: #f9f9f9;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  max-height: 300px; /* Фиксированная максимальная высота */
+  overflow-y: scroll; /* Явно добавляем скроллер внутри блока */
+}
+
+.report-section {
+  margin-bottom: 24px;
+}
+
+.report-section:last-child {
+  margin-bottom: 0;
+}
+
+.report-section .ant-typography strong {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.report-section .ant-typography strong svg {
+  margin-right: 8px;
+  color: #1890ff;
+}
+
+.ticket-status {
+  display: inline-block;
+  padding: 0 7px;
+  white-space: nowrap;
+  margin-inline-end: 8px;
+  font-size: 12px;
+  line-height: 20px;
+  border-radius: 4px;
+}
+
+/* Адаптивные стили */
+@media screen and (max-width: 1680px) {
+  .ticket-details {
+    padding: 20px 24px 10px 24px !important;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .ticket-details {
+    padding: 16px !important;
+  }
+}

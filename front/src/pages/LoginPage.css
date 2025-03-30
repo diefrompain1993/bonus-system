@@ -1,0 +1,57 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Полная высота экрана */
+  background-color: #f0f2f5; /* Светлый фон страницы */
+}
+
+@supports (height: 100dvh) {
+  .login-container {
+    height: 100dvh;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .login-container {
+    padding: 16px;
+  }
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  background-color: #fff; /* Белый фон для формы */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+@media screen and (max-width: 475px) {
+  .login-card {
+    padding: 25px;
+  }
+}
+
+.login-logo {
+  margin-bottom: 20px;
+}
+
+.login-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.ant-form-item {
+  margin-bottom: 16px;
+}
+
+.login-button {
+  width: 100%;
+}
+
+.login-card .ant-form-item-required::before {
+  display: none !important;
+}

@@ -1,0 +1,238 @@
+/* Общие стили для Layout */
+.dashboard-layout {
+  min-height: 100vh;
+  background-color: #f0f2f5 !important;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Стили для содержимого */
+.dashboard-content {
+  padding: 32px;
+  background-color: #fafafa !important;
+  margin-top: 64px; /* Высота шапки */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 1024px) {
+  .dashboard-content {
+    padding: 16px;
+  }
+}
+
+/* Заголовок */
+.dashboard-header {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Контейнер таблицы с минимальной высотой */
+.dashboard-table-container {
+  /* Если хотите «визуально» 10 строк, примерно 54px * 10 + заголовок */
+  /* min-height: 500px; */
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 640px) {
+  .dashboard-table-container {
+    margin-left: -16px;
+    width: calc(100% + 32px);
+  }
+}
+
+/* Таблица занимает всю высоту контейнера */
+.dashboard-table-container .ant-table {
+  /* flex: 1 1 auto; */
+  width: 100%;
+}
+
+/* Чтобы при небольшом количестве строк всё равно было место */
+.dashboard-table-container .ant-table-body {
+  /* min-height: 530px; */
+  min-height: calc(64px * 8);
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+  max-height: 100% !important;
+}
+
+.ant-table-container {
+  width: 100%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .ant-table-container table {
+    min-width: 1200px;
+  }
+}
+
+.ant-table-container .ant-table-thead > tr > th {
+  white-space: nowrap;
+}
+
+/* Стили для кнопок и фильтров */
+.dashboard-controls {
+  width: 100%;
+}
+
+.dashboard-controls .ant-row {
+  justify-content: center;
+}
+
+.dashboard-controls .ant-col {
+  display: flex;
+  justify-content: center;
+}
+
+.create-ticket-button,
+.reset-filters-button {
+  width: 100%;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Иконки внутри кнопок */
+.create-ticket-button .anticon,
+.reset-filters-button .anticon {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 769px) {
+  .reset-filters-button .reset-filters-text {
+    display: none;
+  }
+}
+
+/* Стили таблицы */
+.dashboard-table .ant-table {
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.dashboard-table .ant-table-thead > tr > th {
+  background-color: #fafafa;
+  font-weight: 600;
+  font-size: 16px;
+  color: #555555;
+}
+
+.dashboard-table .ant-table-tbody > tr > td {
+  padding: 5px 16px;
+  height: 64px;
+  font-size: 14px;
+  color: #333333;
+}
+
+/* Типографика */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 24px;
+}
+
+.ant-btn {
+  font-size: 14px;
+}
+
+/* Цветовая схема для кнопок */
+.create-ticket-button {
+  background-color: #1890ff;
+  border-color: #1890ff;
+  color: #ffffff;
+}
+
+.create-ticket-button:hover {
+  background-color: #40a9ff;
+  border-color: #40a9ff;
+}
+
+.reset-filters-button {
+  background-color: #ff4d4f;
+  border-color: #ff4d4f;
+  color: #ffffff;
+}
+
+.reset-filters-button:hover {
+  background-color: #ff7875;
+  border-color: #ff7875 !important;
+  color: #ffffff !important;
+}
+
+/* Плейсхолдер в пустой таблице */
+.ant-table-placeholder {
+  color: #999999;
+}
+
+.ant-table-placeholder p {
+  font-size: 16px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .dashboard-table-container {
+    min-height: 500px;
+  }
+
+  .ant-table-thead > tr > th,
+  .ant-table-tbody > tr > td {
+    font-size: 14px;
+  }
+
+  .create-ticket-button,
+  .reset-filters-button {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .create-ticket-button .anticon,
+  .reset-filters-button .anticon {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-table-container {
+    min-height: 400px;
+  }
+
+  .ant-table-thead > tr > th,
+  .ant-table-tbody > tr > td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .create-ticket-button,
+  .reset-filters-button {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .create-ticket-button .anticon,
+  .reset-filters-button .anticon {
+    font-size: 14px;
+  }
+}
+
+/* Скрываем скроллбар, но оставляем скролл */
+/* .dashboard-table-container .ant-table-body { */
+/* Для IE, Edge */
+/* -ms-overflow-style: none; */
+/* Для Firefox */
+/* scrollbar-width: none; */
+/* } */
+
+/* Для Chrome, Safari, Opera */
+/* .dashboard-table-container .ant-table-body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+} */

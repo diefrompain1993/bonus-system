@@ -1,0 +1,20 @@
+/* Предположим, класс таблицы - "dashboard-table" */
+.dashboard-table .ant-table-tbody > tr:hover .action-buttons {
+    opacity: 1; /* Показываем при hover */
+  }
+  
+  .action-buttons {
+    opacity: 0; /* Спрятано по умолчанию */
+    transition: opacity 0.3s;
+  }
+
+  /* Изначально скрываем кнопки */
+.actions-column .ant-btn {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+/* При ховере на строку таблицы, показываем */
+.ant-table-tbody > tr:hover .actions-column .ant-btn {
+  opacity: 1;
+}
